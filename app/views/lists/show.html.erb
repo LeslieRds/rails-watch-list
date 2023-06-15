@@ -1,12 +1,20 @@
-<div class=container>
-  <h2><%= @list.name %></h2>
-  <h1>Movies</h1>
-  <ul class="list-group">
-    <% @bookmarks.title.each do |bookmark| %>
-    <%= @bookmark.comment %>
-    <% end %>
+<div class="container">
+  <h1>show</h1>
+</div>
 
+<div class="container">
+  <div class="card-category" style="background-image: linear-gradient(rgba(20,20,20), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
+    <h2><%= @list.name %></h2></div>
+</div>
+
+<%= link_to "add a movie", new_bookmark_path %>
+
+<div class="container">
+  <% @list.movies.each do |movie| %>
+    <p><%= movie.title %></p>
+    <p><img src="<%= movie.poster_url %>"></p>
+    <p><%= movie.overview %></p>
+  <% end %>
+</div>
 
 <%= link_to "Back", lists_path %>
-
-</div>

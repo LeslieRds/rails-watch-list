@@ -1,6 +1,6 @@
 <div clas="container">
   <h1>My fabulous lists of movies</h1>
   <% @lists.each do |list| %>
-    <%= link_to list.name, list %>
+    <%= link_to list.name, list_path(list.id) %>
   <% end %>
 </div>
