@@ -7,7 +7,7 @@
 #   Character.create(name: "Luke", movie: movies.first)
 Movie.destroy_all
 
-20.times do
+10.times do
   Movie.create!(
     title: Faker::Movie.title,
     overview: Faker::Movie.quote,
