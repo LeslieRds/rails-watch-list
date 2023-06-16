@@ -4,7 +4,6 @@
     <h2><%= @list.name %></h2>
 <br>
 <%= link_to "add a movie", new_list_bookmark_path(@list) %>
-<%= link_to "Delete", list_bookmark_path(@list) %>
 <br>
   <% @list.movies.each do |movie| %>
     <p><% bookmark = Bookmark.find_by(list: @list, movie: movie) %></p>
@@ -16,4 +15,3 @@
   <% end %>
 <br>
 <%= link_to "Back", lists_path %>
-<h2>Reviews</h2>
